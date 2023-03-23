@@ -1,5 +1,9 @@
+const { dirname } = require('path');
+const path = require('path');
+
 const getHome = (req, res) => {
-  res.sendFile(__dirname + '../../chatbot/index.html');
+  const file = path.join(__dirname, '../client/index.html')
+  res.sendFile(file);
 }
 
 module.exports = {
